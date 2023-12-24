@@ -1,0 +1,400 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{
+box-sizing: border-box; /* 添加了盒模型属性 */
+    padding: 0px;
+    margin: 0px;
+}
+h3{
+    background: red;
+    color: white;
+    width: 100px;
+    text-align: center;
+    padding-top: 3px;
+}
+a:link{
+    text-decoration: none;    /*去下划线*/
+}
+body{
+    font-size: 20px;
+    margin: 10px;
+	background-image: url("musicBG.png");
+	background-size: 100%;	
+	background-repeat: no-repeat;
+	background-color:black;
+}
+ul li{
+    list-style: none;     /*去list圆点 */
+    padding: 10px;
+    border-bottom: 1px solid #F60;
+}
+ul{
+    width: 500px;
+    border-top: 1px solid #F60;
+  padding: 9px;
+}
+a{	
+	position: relative;
+    display: block;
+    /*让链接呈块状呈现，这样可以不用点链接文字就可以响应链接*/
+}
+ a div{display: none;
+ /*初始化版面不显示 即只有在鼠标移动在链接时才显示*/}
+ a:hover div{
+	position: absolute;
+	padding: 0;
+	display: block;
+	width: 200px; 
+	left: 120px;
+	top: 20px;
+	border: 1px solid rgb(91,185,233);    /*给弹出的窗体加上边框*/
+	background-color: rgb(228,246,255);
+	z-index: 999;     /*提高面板信息，使链接文字过长时不会与面板重叠*/
+ }
+ a img{
+    width: 180px;
+    height: 180px;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+ }
+ dl{width: 160px;
+	 float: right;
+	 line-height: 50px;
+}
+ dl dd span{font-weight: bold;}
+
+
+.ribbon {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    margin: auto;
+	top:0;
+	width: 100%;
+}
+
+.ribbon:after,
+.ribbon:before {
+    margin-top: 0.5em;
+    content: "";
+    display: flex;
+    ;
+    border: 1.5em solid #fff;
+}
+
+.ribbon:after {
+    border-right-color: transparent;
+}
+
+.ribbon:before {
+    border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+    color: #000;
+    text-decoration: none;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.ribbon span {
+    background: #fff;
+    display: inline-block;
+    line-height: 3em;
+    padding: 0 1.5em;
+    margin-top: 0.5em;
+    position: relative;
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+    /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;
+    /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;
+    /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;
+    /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+    background: #FFD204;
+    margin-top: 0;
+}
+
+.ribbon span:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.ribbon span:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+
+.bottom
+        {
+            position:absolute;
+            right:0px;
+            bottom:0px;
+            background:#000000;
+            color:#fff;
+            display:block;
+            width:100%;
+            text-align:center;
+            z-index: 10;
+        }
+.bottom span
+  {
+    position:relative;
+    display:block;
+    left:0;
+
+   }
+
+.submit{
+    padding-top: 120px;
+}
+
+nav {
+    display: flex; /* 添加了弹性布局属性 */
+    justify-content: center; /* 设置导航栏居中 */
+    position: relative; /* 修改：使用相对定位 */
+}
+
+nav ul {
+    display: flex; /* 添加了弹性布局属性 */
+}
+
+nav ul li {
+    margin: 10px; /* 设置导航链接的间距 */
+}
+
+nav a:link,
+nav a:visited {
+    color: #000;
+    text-decoration: none;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+nav span {
+    background: #fff;
+    display: inline-block;
+    line-height: 3em;
+    padding: 0 1.5em;
+    margin-top: 0.5em;
+    position: relative;
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+    /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;
+    /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;
+    /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;
+    /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+nav a:hover span {
+    background: #FFD204;
+    margin-top: 0;
+}
+
+nav span:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+nav span:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+
+
+
+#song-list-div {
+  display: none; /* 设置歌曲列表默认隐藏 */
+}
+
+#song-list {
+  position:absolute; /* 设置歌曲列表绝对定位 */
+  border: 1px solid black; /* 设置歌曲列表边框 */
+  box-shadow: 5px 5px 10px gray; /* 设置歌曲列表阴影 */
+}
+
+.carousel-center {
+  margin: 0 auto; /* 水平居中 */
+  margin-top: 50px; /* 留出一些上边距 */
+  z-index: 1; /* 设置一个较高的层叠顺序，避免被其他元素遮挡 */
+}
+.navbar-toggler-icon {
+    color: #000; /* 汉堡菜单按钮颜色 */
+}
+
+.navbar-toggler-icon:hover {
+    color: #fff; /* 汉堡菜单按钮悬停时颜色 */
+}
+
+.navbar-toggler-hidden {
+    display: none; /* 大屏幕时隐藏汉堡菜单按钮 */
+}
+
+.navbar-toggler {
+    z-index: 1000;
+}
+
+.navbar-collapse {
+    z-index: 999;
+}
+.navbar {
+    background-color: transparent; /* 或者设置为与页面背景颜色相匹配的颜色值 */
+}
+
+/* 隐藏大尺寸屏幕上的汉堡菜单的 nav-item 和白色框 */
+@media (min-width: 768px) {
+    .navbar-nav {
+        display: none !important;
+    }
+
+
+    .navbar-toggler-hidden {
+        display: inline-block !important;
+    }
+}
+
+/* 隐藏ribbon的主导航栏 */
+@media (max-width: 767px) {
+    .ribbon {
+        display: none;
+    }
+}
+
+/* 在小尺寸屏幕上，调整音乐播放器和图片轮播的样式，各个部件的样式 */
+@media screen and (max-width: 767px) {
+    /* 将歌曲列表和轮播容器调整为垂直排列 */
+    #song-list-div,
+    #carouselwithIndicators {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+	 #song-list {
+        position: static;
+        margin-top: 10px; /* 调整垂直间距 */
+    }
+	
+	.light-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+    .light,
+    .chandelier {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+	.chandelier{
+		display: none;
+	}
+}
+
+
+
+/* 聚光灯效果 */
+.carousel-spotlight {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-spotlight::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5));
+    z-index: 1;
+}
+
+/* 图片轮播圆角矩形容器 */
+.carousel-container {
+    overflow: hidden;
+    border-radius: 20px; /* 调整圆角大小 */
+}
+
+/* 图片轮播样式 */
+.carousel-item img {
+    width: 100%;
+    border-radius: 20px; /* 保持和容器一样的圆角大小 */
+}
+
+/*添加灯光效果*/
+.light-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.light {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 100vw;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.8) 20%, transparent 80%);
+  transform: translateX(-50%) rotateX(90deg);
+  transform-origin: top center;
+  animation: lightAnimation 30s linear ;
+}
+
+.chandelier {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 150px;
+  background-color: #c0c0c0;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes lightAnimation {
+  0% {
+      transform: translateX(-50%) rotateX(90deg);
+  }
+  50% {
+      transform: translateX(-50%) rotateX(-90deg);
+  }
+  100% {
+      transform: translateX(-50%) rotateX(90deg);
+  }
+}

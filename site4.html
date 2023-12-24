@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>视频</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="page4.css">
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="site1.html"><i class="fa fa-home"></i> HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="site2.html"><i class="fa fa-info-circle"></i> INFO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="site3.html"><i class="fa fa-music"></i> MUSIC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="site4.html"><i class="fa fa-video-camera"></i> VIDEO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	
+	
+	<div class="ribbon">
+		<a href="site1.html"><i class="fa fa-home" style="background-color:white; color:black;"><span>HOME</span></i></a>
+		<a href="site2.html"><i class="fa fa-info-circle" style="background-color:white; color:black;"><span>INFO</span></i></a>
+		<a href="site3.html"><i class="fa fa-music" style="background-color:white; color:black;"><span>MUSIC</span></i></a>
+		<a href="site4.html"><i class="fa fa-video-camera" style="background-color:white; color:black;"><span>VIDEO</span></i></a>
+	</div>
+
+
+	<video id="myVideo" controls width="50%" height="auto" class="rainbow-border">
+		<source src="movie.ogg" type="video/ogg">
+		<source src="video.mp4" type="video/mp4">
+		<source src="movie.webm" type="video/webm">
+		<track src=
+			   "subtitles/Rick-Astley-Never-Gonna-Give-You-Up.vtt" label="English" kind="subtitles" srclang="en" default>
+  		<track src="subtitles/Rick-Astley-Never-Gonna-Give-You-Up.zh-CN.vtt" label="中文" kind="subtitles" srclang="zh">
+  		<track src="subtitles/Rick-Astley-Never-Gonna-Give-You-Up.es.vtt" label="Español" kind="subtitles" srclang="es">
+	</video>
+
+	
+		    <!-- 引入Bootstrap的JavaScript文件（jQuery 和 Popper.js 依赖项） -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

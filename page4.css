@@ -1,0 +1,185 @@
+@charset "utf-8";
+/* CSS Document */
+.ribbon {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    margin: auto;
+	top:0;
+	width: 100%;
+}
+
+.ribbon:after,
+.ribbon:before {
+    margin-top: 0.5em;
+    content: "";
+    display: flex;
+    ;
+    border: 1.5em solid #fff;
+}
+
+.ribbon:after {
+    border-right-color: transparent;
+}
+
+.ribbon:before {
+    border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+    color: #000;
+    text-decoration: none;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.ribbon span {
+    background: #fff;
+    display: inline-block;
+    line-height: 3em;
+    padding: 0 1.5em;
+    margin-top: 0.5em;
+    position: relative;
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+    /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;
+    /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;
+    /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;
+    /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+    background: #FFD204;
+    margin-top: 0;
+}
+
+.ribbon span:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.ribbon span:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+/* 设置 body 元素的背景图片 */
+body {
+ background-image: url('huaji.gif');
+ background-repeat: no-repeat;
+ background-size: cover;
+background-color: #868686;
+ 
+}
+
+#myVideo {
+    position: absolute; /* 修改：使用绝对定位 */
+    top: 50%; /* 修改：设置垂直位置为容器的一半 */
+    left: 50%; /* 修改：设置水平位置为容器的一半 */
+    transform: translate(-50%, -50%); /* 修改：使用变换属性来调整位置，使其居中 */
+    z-index: -1; /* 修改：设置层叠顺序为最低，避免遮挡ribbon */
+}
+
+
+
+
+/* 添加媒体查询，让页面变为响应式网页 */
+@media screen and (max-width: 600px) {
+  .ribbon {
+    flex-direction: column; /* 修改：使用垂直排列 */
+  }
+
+  .ribbon:after,
+  .ribbon:before {
+    display: none; /* 修改：隐藏伪元素 */
+  }
+
+  .ribbon span {
+    margin-top: 0; /* 修改：去掉上边距 */
+  }
+
+  .ribbon span:before,
+  .ribbon span:after {
+    display: none; /* 修改：隐藏伪元素 */
+  }
+}
+
+
+.navbar-toggler-icon {
+    color: #000; /* 汉堡菜单按钮颜色 */
+}
+
+.navbar-toggler-icon:hover {
+    color: #fff; /* 汉堡菜单按钮悬停时颜色 */
+}
+
+.navbar-toggler-hidden {
+    display: none; /* 大屏幕时隐藏汉堡菜单按钮 */
+}
+
+.navbar-toggler {
+    z-index: 1000;
+}
+
+.navbar-collapse {
+    z-index: 999;
+}
+.navbar {
+    background-color: transparent; /* 或者设置为与页面背景颜色相匹配的颜色值 */
+}
+
+/* 隐藏大尺寸屏幕上的汉堡菜单的 nav-item 和白色框 */
+@media (min-width: 768px) {
+    .navbar-nav {
+        display: none !important;
+    }
+
+
+    .navbar-toggler-hidden {
+        display: inline-block !important;
+    }
+}
+
+/* 隐藏ribbon的主导航栏 */
+@media (max-width: 767px) {
+    .ribbon {
+        display: none;
+    }
+}
+
+
+
+.rainbow-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid transparent;
+    border-image-source: linear-gradient(45deg, #ff0000, #ff0, #0f0, #0ff, #00f, #f0f, #ff0000);
+    border-image-slice: 1;
+    animation: rainbowAnimation 5s linear infinite;
+    z-index: 2;
+}
+
+/* 添加一个动画效果来让彩带流动 */
+@keyframes rainbowAnimation {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}

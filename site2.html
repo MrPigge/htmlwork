@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>个人表单</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="page2.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light d-lg-none">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="site1.html"><i class="fa fa-home"></i> HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="site2.html"><i class="fa fa-info-circle"></i> INFO</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="site3.html"><i class="fa fa-music"></i> MUSIC</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="site4.html"><i class="fa fa-video-camera"></i> VIDEO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	
+	
+	
+     <div class="ribbon">
+				<a href="site1.html"><i class="fa fa-home" style="background-color:white; color:black;"><span>HOME</span></i></a>
+				<a href="site2.html"><i class="fa fa-info-circle" style="background-color:white; color:black;"><span>INFO</span></i></a>
+				<a href="site3.html"><i class="fa fa-music" style="background-color:white; color:black;"><span>MUSIC</span></i></a>
+				<a href="site4.html"><i class="fa fa-video-camera" style="background-color:white; color:black;"><span>VIDEO</span></i></a>
+     </div>
+
+    <div class="form">
+        <div class="submit" align="center">
+            <span class="form_title" >个人信息提交</span>
+            
+			
+			<div class="form_input" data-label="姓名">
+                <span>姓名：</span>
+                <input class="inputs" type="text" placeholder="例：李桂赟添">
+            </div>
+            <div class="form_input" data-label="班级">
+                <span>班级:</span>
+                <input class="inputs" type="text" placeholder="例：21计算机3班">
+            </div>
+			<div class="form_input" data-label="性别">
+                <span>性别：</span>
+                <select class="inputs" name="gender">
+                    <option value="male">男</option>
+                    <option value="female">女</option>
+                </select>
+            </div>
+            <div class="form_input" data-label="学号">
+                <span>学号：</span>
+                <input class="inputs" type="text" placeholder="例：221240316">
+            </div>
+            <div class="form_input" data-label="专业">
+                <span>专业：</span>
+                <input class="inputs" type="text" placeholder="例：计算机科学与技术">
+			<div class="form_input" data-label="课程">
+                <span>课程：</span>
+                <input class="inputs" type="text" placeholder="例：web设计">
+            </div>
+				
+            <div>您的个人隐私信息 本人承诺保密</div>
+            <div class="form_input"  data-label="邮箱">
+                 <span>邮箱：</span>
+                <input class="input" name="mail" type="email" placeholder="请输入邮箱号：xxxxx@xx.com">	
+            </div>
+			<div class="form_input" data-label="手机号">
+                <span>手机号：</span>
+                <input class="input" name="phone" type="tel" value="+86" placeholder="请输入手机号">
+            </div >
+            <div class="form_input" data-label="个人身份">
+                <span>个人身份</span>
+                <input class="input" name="text" type="text" placeholder="个人身份：学生/教师/管理员">
+            </div>
+            </div>
+            <div class="btn_submit">
+                <a href="./finish.html"></a>
+					<form action="#" onsubmit="return checkForm()">
+        				<!-- 表单内容 -->
+        				<input type="submit" value="提交">
+    				</form>
+                    
+                <a href="./site1.html" class="back"><button class="home_href">首页</button></a>
+            </div>
+        </div>
+		
+		<div id="confirmation-dialog" style="display: none;">
+          <p>请确认您的提交信息：</p>
+          <ul id="confirmation-info"></ul>
+          <button onclick="confirmSubmission()">确认提交</button>
+        </div>
+
+    </div>
+	
+	
+	<div class="contact-icon" onclick="openDialog()">
+      <i class="fas fa-question-circle"></i>
+    </div>
+
+    <div id="contact-dialog" class="contact-dialog">
+      <div class="dialog-content">
+          <p>有问题？联系我！</p>
+          <button onclick="showEmail()">联系我</button>
+      </div>
+    </div>
+	
+	
+	    <!-- 引入Bootstrap的JavaScript文件（jQuery 和 Popper.js 依赖项） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="js/script.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	
+	<div class="bottom">
+            <span class="style4">@Mr.Pigge_Official</span><br />
+            <span class="style4"> 本网站最终解释权归个人所有  电话：18634376637  </span> <br />
+    </div>
+
+</body>
+</html>
+
+
+

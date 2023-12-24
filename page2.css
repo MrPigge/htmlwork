@@ -1,0 +1,207 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-image: url("site2BG.jpg");
+	background-size: 100%;	
+	background-repeat: no-repeat;
+	background-color:#A0A09E;
+}
+
+.submit{
+    padding-top: 10%; /* 修改：使用百分比来设置上边距 */
+}
+.ribbon {
+    display: flex;
+    justify-content: center;
+    position: relative; /* 修改：使用相对定位 */
+    margin: auto;
+}
+
+.ribbon:after,
+.ribbon:before {
+    margin-top: 0.5em;
+    content: "";
+    display: flex;
+    ;
+    border: 1.5em solid #fff;
+}
+
+.ribbon:after {
+    border-right-color: transparent;
+}
+
+.ribbon:before {
+    border-left-color: transparent;
+}
+
+.ribbon a:link,
+.ribbon a:visited {
+    color: #000;
+    text-decoration: none;
+    height: 3.5em;
+    overflow: hidden;
+}
+
+.ribbon span {
+    background: #fff;
+    display: inline-block;
+    line-height: 3em;
+    padding: 0 1.5em;
+    margin-top: 0.5em;
+    position: relative;
+    -webkit-transition: background-color 0.2s, margin-top 0.2s;
+    /* Saf3.2+, Chrome */
+    -moz-transition: background-color 0.2s, margin-top 0.2s;
+    /* FF4+ */
+    -ms-transition: background-color 0.2s, margin-top 0.2s;
+    /* IE10 */
+    -o-transition: background-color 0.2s, margin-top 0.2s;
+    /* Opera 10.5+ */
+    transition: background-color 0.2s, margin-top 0.2s;
+}
+
+.ribbon a:hover span {
+    background: #FFD204;
+    margin-top: 0;
+}
+
+.ribbon span:before {
+    content: "";
+    position: absolute;
+    top: 3em;
+    left: 0;
+    border-right: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.ribbon span:after {
+    content: "";
+    position: absolute;
+    top: 3em;
+    right: 0;
+    border-left: 0.5em solid #9B8651;
+    border-bottom: 0.5em solid #fff;
+}
+
+.form{
+	font-weight: bold;  /* 设置字体粗细 */
+    color: #FFF;
+}
+.form_input span {
+    margin-right: 10px;  /* 设置 span 元素右侧的间距，使得文字更整齐 */
+}
+.inputs{
+    border:0;
+	border-bottom:1 solid black;
+/*	background: hsla(43, 31%, 46%, 0);输入框只有边框*/
+    flex: 1; /* 修改：添加了 flex 属性 */
+    flex-basis: 200px; /* 修改：添加了 flex-basis 属性 */
+}
+
+
+.bottom
+{
+    position:absolute;
+    right:0px;
+    bottom:10px;
+    background:#000000;
+    color:#fff;
+    display:block;
+    width:100%;
+    text-align:center;
+    z-index: 10;
+}
+.bottom span{
+  position:relative;
+  display:block;
+  left:0;
+}
+
+/* 添加了媒体查询，当视口宽度小于 600px 时，应用以下样式 */
+@media screen and (max-width: 600px) {
+    .form_input {
+        flex-wrap: wrap; /* 修改：添加了 flex-wrap 属性 */
+    }
+}
+
+
+.navbar-toggler-icon {
+    color: #000; /* 汉堡菜单按钮颜色 */
+}
+
+.navbar-toggler-icon:hover {
+    color: #fff; /* 汉堡菜单按钮悬停时颜色 */
+}
+
+.navbar-toggler-hidden {
+    display: none; /* 大屏幕时隐藏汉堡菜单按钮 */
+}
+
+.navbar-toggler {
+    z-index: 1000;
+}
+
+.navbar-collapse {
+    z-index: 999;
+}
+
+
+/* 隐藏大尺寸屏幕上的汉堡菜单的 nav-item 和白色框 */
+@media (min-width: 768px) {
+    .navbar-nav {
+        display: none !important;
+    }
+
+
+    .navbar-toggler-hidden {
+        display: inline-block !important;
+    }
+}
+
+/* 隐藏ribbon的主导航栏 */
+@media (max-width: 767px) {
+    .ribbon {
+        display: none;
+    }
+}
+
+
+/*联系窗口样式*/
+.contact-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFF; /* 图标颜色 */
+	z-index: 100;
+}
+
+.contact-dialog {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	z-index: 100;
+}
+
+.dialog-content {
+    text-align: center;
+}
+
+.dialog-content button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dialog-content button:hover {
+    background-color: #2980b9;
+}
